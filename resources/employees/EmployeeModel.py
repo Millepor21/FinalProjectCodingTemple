@@ -12,7 +12,7 @@ class EmployeeModel(db.Model):
     manager_id = db.Column(db.Integer, db.ForeignKey('managers.id'), nullable=False)
     
     def __repr__(self):
-        return f'<Employee: {self.first_name + ' ' + self.last_name}>'
+        return f'<Employee: {self.first_name} {self.last_name}>'
   
     def hash_password(self, password):
         self.password_hash = generate_password_hash(password)

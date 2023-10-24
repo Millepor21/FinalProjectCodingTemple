@@ -1,4 +1,4 @@
 .env
-manager-dashboard/
+manager_dashboard_venv/
 __pycache__/
 migrations/

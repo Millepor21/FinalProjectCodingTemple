@@ -11,7 +11,7 @@ from .TransactionModel import TransactionModel
 bp.route('/transaction')
 class TransactionList(MethodView):
     
-    @bp.response(TransactionSchema)
+    @bp.response(200, TransactionSchema)
     def get(self):
         return TransactionModel.query.all()
     

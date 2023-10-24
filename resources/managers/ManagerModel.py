@@ -11,7 +11,7 @@ class ManagerModel(db.Model):
     last_name = db.Column(db.String, nullable = False)
     
     def __repr__(self):
-        return f'<Manager: {self.first_name + ' ' + self.last_name}>'
+        return f'<Manager: {self.first_name} {self.last_name}>'
   
     def hash_password(self, password):
         self.password_hash = generate_password_hash(password)

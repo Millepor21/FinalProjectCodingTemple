@@ -39,7 +39,7 @@ class EmployeeList(MethodView):
                 abort(400, message='Username Already Taken')
         abort(400, message='Invalid Permissions to Edit This Employee')
 
-@bp.routes('/employees/<employee_id>')
+@bp.route('/employees/<employee_id>')
 class Employee(MethodView):
     
     @bp.response(200, EmployeeTransactionsSchema)
